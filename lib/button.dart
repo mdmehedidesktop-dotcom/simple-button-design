@@ -18,6 +18,21 @@ class _BottonScreenState extends State<BottonScreen> {
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
             Text("$mehedi",style: TextStyle(fontSize: 30),),
+
+
+            InkWell(
+              onDoubleTap: (){
+                mehedi=mehedi+100;
+                setState(() {});
+              },
+              child: Container(
+                height: 50,
+                width: 140,
+                color: Colors.yellow,
+
+              ),
+            ),
+            Divider(),
             Row(
               spacing: 10,
               mainAxisAlignment: MainAxisAlignment.center,
@@ -29,7 +44,14 @@ class _BottonScreenState extends State<BottonScreen> {
                 ElevatedButton(onPressed: (){
                   mehedi ++;
                   setState(() {});
-                }, child: Text("+",style: TextStyle(fontSize: 30),))
+                }, child: Text("+",style: TextStyle(fontSize: 30),)),
+                ElevatedButton(onPressed: (){},
+                    onLongPress: (){
+                      mehedi *=5;
+                      setState(() {});
+                    },
+                    child: Text("*",style: TextStyle(fontSize: 30),)),
+
               ],
             )
 
