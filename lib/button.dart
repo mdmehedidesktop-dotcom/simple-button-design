@@ -1,20 +1,18 @@
 import 'package:flutter/material.dart';
-class ButtonScreen extends StatefulWidget {
-  const ButtonScreen({super.key});
+class BottonScreen extends StatefulWidget {
+  const BottonScreen({super.key});
 
   @override
-  State<ButtonScreen> createState() => _ButtonScreenState();
+  State<BottonScreen> createState() => _BottonScreenState();
 }
 
-class _ButtonScreenState extends State<ButtonScreen> {
-
-  int mehedi = 20;
+class _BottonScreenState extends State<BottonScreen> {
+  int mehedi = 10;
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(centerTitle:true, title: Text("Mehedi app developer",style: TextStyle(fontSize: 22),),
-        backgroundColor: Colors.lightBlue,
-      ),
+      appBar: AppBar(backgroundColor: Colors.lightBlue,centerTitle:true,title: Text("Mehedi App Developer",style: TextStyle(fontSize: 22),
+      ),),
       body: Center(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
@@ -31,13 +29,14 @@ class _ButtonScreenState extends State<ButtonScreen> {
                 ElevatedButton(onPressed: (){
                   mehedi ++;
                   setState(() {});
-                }, child: Text("+",style: TextStyle(fontSize: 30),)),
+                }, child: Text("+",style: TextStyle(fontSize: 30),))
               ],
             )
+
+
           ],
         ),
       ),
-
     );
   }
 }
